@@ -86,7 +86,7 @@ function App() {
 
  const selectedProject= projectState.projects.find(project=>project.id===projectState.selectedProjectId)
 
-  let content=<SelectedProject project={selectedProject} onDelete={handleDelete} onAddtask={handlAddtask} onDeletetask={handleDeletetask} />;
+  let content=<SelectedProject project={selectedProject} onDelete={handleDelete} onAddtask={handlAddtask} onDeletetask={handleDeletetask} tasks={projectState.tasks} />;
   if (projectState.selectedProjectId===null){
     content=<Newproject onAdd={handleAddproject} onCancel={handleCancel}/>
   }

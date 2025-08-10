@@ -1,7 +1,7 @@
 import React from 'react'
 import Tasks from './Tasks'
 
-export default function SelectedProject({project, onDelete, onAddtask, onDeletetask}) {
+export default function SelectedProject({project, onDelete, onAddtask, onDeletetask, tasks}) {
   return (
     <div className="w-[35rem] mt-16">
       <header className="pb-4 mb-4 border-b-2 border-stone-300">
@@ -12,7 +12,7 @@ export default function SelectedProject({project, onDelete, onAddtask, onDeletet
         <p  className="mb-4 text-stone-400">{project.duedate}</p>
         <p className="text-stone-600 whitespace-pre-wrap">{project.description}</p>
       </header>
-      <Tasks onAdd={onAddtask} onDelete={onDeletetask}/>
+      <Tasks onAdd={onAddtask} onDelete={onDeletetask} tasks={tasks}/>
     </div>
   )
 }
